@@ -1,0 +1,6 @@
+No seu Kali Linux, abra um terminal.
+python3 -m http.server 80
+Descubra o endereço IP do seu Kali Linux executando o comando:
+ip addr
+No navegador, acesse o endereço IP seguido por :80, algo assim:
+http://192.192.0.12:80
